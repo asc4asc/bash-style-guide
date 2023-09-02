@@ -91,7 +91,7 @@ function main() {
   # here add your own commands and functions!
   verbose_print "Show the verbose function!"
   [ ${demoflag} ] && demo_function
-  print('Main Function!')
+  printif "Main Function!\n"
 }
 
 # Invoke main with args if not sourced
