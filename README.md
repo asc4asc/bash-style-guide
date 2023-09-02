@@ -53,11 +53,13 @@ All variables created in a function should be made local.
 # right
 function foo {
   local i=foo # this is local, preferred
+  return 0
 }
 
 # do not use
 foo() {
   i=foo
+}
 ```
 
 ### Block Statements
