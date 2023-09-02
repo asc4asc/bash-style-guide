@@ -38,7 +38,7 @@ function verbose_print() {
 # OUTS: None
 function demo_function() {
   verbose_print "This verbose function is called to describe the use of verbose in the demo function"
-  prinf "%s\n" "Hi, demo_function in action!"
+  printf "%s\n" "Hi, demo_function in action!"
 }
 
 # DESC: Usage help
