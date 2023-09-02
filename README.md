@@ -64,11 +64,8 @@ foo() {
 
 ### Block Statements
 
-`then` should be on the same line as `if`, and `do` should be on the same line
-as `while`.
-
 ``` bash
-# wrong
+# nice
 if true
 then
     ...
@@ -79,7 +76,7 @@ true && {
     ...
 }
 
-# right
+# not so nice but need not so much space
 if true; then
     ...
 fi
@@ -106,16 +103,16 @@ bash builtins or keywords instead of external commands or `sh(1)` syntax.
 Use `[[ ... ]]` for conditional testing, not `[ .. ]` or `test ...`
 
 ``` bash
+# correct
+[[ -d /etc ]]
+
 # wrong
 test -d /etc
 
 # also wrong
 [ -d /etc ]
 
-# correct
-[[ -d /etc ]]
 ```
-
 See http://mywiki.wooledge.org/BashFAQ/031 for more information
 
 ### Sequences
@@ -151,8 +148,8 @@ done
 Use `$(...)` for command substitution.
 
 ``` bash
-foo=`date`  # wrong
 foo=$(date) # right
+foo=`date`  # wrong
 ```
 
 ### Math / Integer Manipulation
@@ -178,20 +175,20 @@ Do **not** use the `let` command.
 
 ### Parameter Expansion
 
-Always prefer [parameter
-expansion](http://mywiki.wooledge.org/BashGuide/Parameters#Parameter_Expansion)
+Always prefer [parameter expansion](http://mywiki.wooledge.org/BashGuide/Parameters#Parameter_Expansion)
 over external commands like `echo`, `sed`, `awk`, etc.
 
 ``` bash
 name='bahamas10'
 
+# right
+prog=${0##*/}
+nonumbers=${name//[0-9]/}
+
 # wrong
 prog=$(basename "$0")
 nonumbers=$(echo "$name" | sed -e 's/[0-9]//g')
 
-# right
-prog=${0##*/}
-nonumbers=${name//[0-9]/}
 ```
 
 ### Listing Files
@@ -228,15 +225,15 @@ Use bash arrays instead of a string separated by spaces (or newlines, tabs,
 etc.) whenever possible
 
 ``` bash
-# wrong
-modules='json httpserver jshint'
-for module in $modules; do
-    npm install -g "$module"
-done
-
 # right
 modules=(json httpserver jshint)
 for module in "${modules[@]}"; do
+    npm install -g "$module"
+done
+
+# wrong
+modules='json httpserver jshint'
+for module in $modules; do
     npm install -g "$module"
 done
 ```
