@@ -140,20 +140,7 @@ See http://mywiki.wooledge.org/BashFAQ/031 for more information
 ### Sequences
 
 Use bash builtins for generating sequences
-
 ``` bash
-n=10
-
-# wrong
-for f in $(seq 1 5); do
-    ...
-done
-
-# wrong
-for f in $(seq 1 "$n"); do
-    ...
-done
-
 # right
 for f in {1..5}; do
     ...
@@ -163,6 +150,18 @@ done
 for ((i = 0; i < n; i++)); do
     ...
 done
+
+# wrong
+for f in $(seq 1 5); do
+    ...
+done
+
+# wrong
+n=10
+for f in $(seq 1 "$n"); do
+    ...
+done
+
 ```
 
 ### Command Substitution
