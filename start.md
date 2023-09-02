@@ -74,7 +74,7 @@ function parse_params() {
         demoflag=true
         ;;
      *)
-        echo "Invalid parameter was provided: $param" 
+        pretty_print "%s %s""Invalid parameter was provided:" $param 
         exit 126
         ;;
     esac
