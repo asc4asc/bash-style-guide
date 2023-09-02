@@ -1,3 +1,5 @@
+This is a copy for working on it please go to the original! 
+
 Bash Style Guide
 ================
 
