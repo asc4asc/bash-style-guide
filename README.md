@@ -15,6 +15,7 @@ http://mywiki.wooledge.org/BashGuide/Practices
 Better Fork the original style guide on GitHub https://github.com/bahamas10/bash-style-guide
 
 DEBUG use this!
+================
 
 bash -x ./mybrokenscript
 
