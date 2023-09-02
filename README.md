@@ -14,6 +14,21 @@ http://mywiki.wooledge.org/BashGuide/Practices
 
 Better Fork the original style guide on GitHub https://github.com/bahamas10/bash-style-guide
 
+DEBUG use this!
+
+bash -x ./mybrokenscript
+
+#!/usr/bin/env bash
+[..irrelevant code..]
+set -x
+[..relevant code..]
+set +x
+[..irrelevant code..]
+
+
+debug_prompt () { read -p "[$BASH_SOURCE:$LINENO] $BASH_COMMAND?" _ ;}
+trap 'debug_prompt "$_"' DEBUG
+
 Aesthetics
 ----------
 
