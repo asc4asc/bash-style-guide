@@ -38,7 +38,7 @@ function verbose_print() {
 # OUTS: None
 function demo_function() {
   verbose_print "This verbose function is called to describe the use of verbose in the demo function"
-  echo "Hi, demo_function in action!"
+  prinf "%s\n" "Hi, demo_function in action!"
 }
 
 # DESC: Usage help
@@ -74,7 +74,7 @@ function parse_params() {
         demoflag=true
         ;;
      *)
-        pretty_print "%s %s""Invalid parameter was provided:" $param 
+        printf "%s %s""Invalid parameter was provided:" $param 
         exit 126
         ;;
     esac
@@ -91,7 +91,7 @@ function main() {
   # here add your own commands and functions!
   verbose_print "Show the verbose function!"
   [ ${demoflag} ] && demo_function
-  printif "Main Function!\n"
+  printf "%s\n" "Main Function!"
 }
 
 # Invoke main with args if not sourced
