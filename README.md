@@ -29,9 +29,11 @@ set +x
 ``` 
 ``` bash
 debug_prompt () { read -p "[$BASH_SOURCE:$LINENO] $BASH_COMMAND?" _ ;}
+[..irrelevant code..]
 trap 'debug_prompt "$_"' DEBUG
-......
+[..relevant code..]
 trap - DEBUG
+[..irrelevant code..]
 ``` 
 
 Aesthetics
