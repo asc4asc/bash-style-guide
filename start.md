@@ -37,7 +37,7 @@ function verbose_print() {
 # ARGS: $@ (required): 
 # OUTS: None
 function demo_function() {
-  verbose_print "This verbose function is called to describe the use of verbose in the domo function"
+  verbose_print "This verbose function is called to describe the use of verbose in the demo function"
   echo "Hi, demo_function in action!"
 }
 
@@ -91,6 +91,7 @@ function main() {
   # here add your own commands and functions!
   verbose_print "Show the verbose function!"
   [ ${demoflag} ] && demo_function
+  print('Main Function!')
 }
 
 # Invoke main with args if not sourced
