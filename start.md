@@ -74,7 +74,7 @@ function parse_params() {
         demoflag=true
         ;;
      *)
-        printf "%s %s""Invalid parameter was provided:" $param 
+        printf "%s %s\n""Invalid parameter was provided:" $param 
         exit 126
         ;;
     esac
