@@ -19,7 +19,7 @@ Aesthetics
 
 ### Tabs / Spaces
 
-Spaces because I often change the editor and the system. :-(
+Spaces (2) because I often change the editor and the system. :-(
 
 ### Columns
 
@@ -31,13 +31,15 @@ You don't use semicolons on the command line (I hope), don't use them in
 scripts.
 
 ``` bash
-# wrong
-name='dave';
-echo "hello $name";
 
 #right
 name='dave'
 echo "hello $name"
+
+# wrong
+name='dave';
+echo "hello $name";
+
 ```
 
 The exception to this rule is outlined in the `Block Statements` section below.
@@ -45,19 +47,17 @@ Namely, semicolons should be used for control statements like `if` or `while`.
 
 ### Functions
 
-Don't use the `function` keyword.  All variables created in a function should
-be made local.
+All variables created in a function should be made local.
 
 ``` bash
-# wrong
+# right
 function foo {
-    i=foo # this is now global, wrong depending on intent
+  local i=foo # this is local, preferred
 }
 
-# right
+# do not use
 foo() {
-    local i=foo # this is local, preferred
-}
+  i=foo
 ```
 
 ### Block Statements
