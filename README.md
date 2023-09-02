@@ -1,18 +1,18 @@
-This is a copy for working on it please go to the original! 
+This is a copy for working on it please go to the original! --> https://github.com/bahamas10/bash-style-guide
 
 My Bash Style Guide
 ================
+Most of my bash scripts are a copy from the net. Also comes form one liners like.
 
-This style guide is meant to outline how to write bash scripts with
-a style that makes them safe and predictable.  This guide is based
-on [this wiki](http://mywiki.wooledge.org), specifically this page:
+ls | grep "test" && echo ja!
+
+If they grow I think I had to refactor them. Then I will use this style guide to get a readable code.
+
+The original guide was based on [this wiki](http://mywiki.wooledge.org), specifically this page:
 
 http://mywiki.wooledge.org/BashGuide/Practices
 
-If anything is not mentioned explicitly in this guide, it defaults to matching
-whatever is outlined in the wiki.
-
-Fork this style guide on GitHub https://github.com/bahamas10/bash-style-guide
+Better Fork the original style guide on GitHub https://github.com/bahamas10/bash-style-guide
 
 Aesthetics
 ----------
