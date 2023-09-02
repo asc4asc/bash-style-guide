@@ -302,14 +302,14 @@ Don't use `cat(1)` when you don't need it.  If programs support reading from
 stdin, pass the data in using bash redirection.
 
 ``` bash
-# wrong
-cat file | grep foo
-
 # right
 grep foo < file
 
 # also right
 grep foo file
+
+# wrong
+cat file | grep foo
 ```
 
 Prefer using a command line tools builtin method of reading a file instead of
@@ -374,8 +374,7 @@ or command.
 Also, variables like `$$`, `$?`, `$#`, etc. don't required quotes because they
 will never contain spaces, tabs, or newlines.
 
-When in doubt however, [quote all
-expansions](http://mywiki.wooledge.org/Quotes).
+When in doubt however, [quote all expansions](http://mywiki.wooledge.org/Quotes).
 
 ### Variable Declaration
 
@@ -384,17 +383,17 @@ Don't use `let` or `readonly` to create variables.  `declare` should *only*
 be used for associative arrays.  `local` should *always* be used in functions.
 
 ``` bash
-# wrong
-declare -i foo=5
-let foo++
-readonly bar='something'
-FOOBAR=baz
-
 # right
 i=5
 ((i++))
 bar='something'
 foobar=baz
+
+# wrong
+declare -i foo=5
+let foo++
+readonly bar='something'
+FOOBAR=baz
 ```
 
 ### shebang
@@ -413,13 +412,25 @@ Unless you have a reason to use something else.
 errors for `cd` (or commands like it) and exit or break if they are present.
 
 ``` bash
+# right
+cd /some/path || exit
+rm file
+
+# right may be
+cd /some/path && rm file
+
+# right may be
+if cd /some/path
+then
+  rm file
+else
+ exit 255
+fi
+
 # wrong
 cd /some/path # this could fail
 rm file       # if cd fails where am I? what am I deleting?
 
-# right
-cd /some/path || exit
-rm file
 ```
 
 ### `set -e`
