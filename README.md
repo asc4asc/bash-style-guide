@@ -1,6 +1,6 @@
 This is a copy for working on it please go to the original! 
 
-Bash Style Guide
+My Bash Style Guide
 ================
 
 This style guide is meant to outline how to write bash scripts with
@@ -14,35 +14,16 @@ whatever is outlined in the wiki.
 
 Fork this style guide on GitHub https://github.com/bahamas10/bash-style-guide
 
-Preface
--------
-
-I wrote this guide originally for a project I had worked on called
-[Basher](https://github.com/bahamas10/basher).  The idea was to make a program
-like [Puppet](https://puppet.com/) or [Chef](https://www.chef.io/) but using
-nothing but Bash - simple scripts that could do automation tasks instead of
-complex ruby scripts or whatever else is used by existing configuration
-management software.
-
-Basher was fun to write, and for what it does it works pretty well.  As part of
-writing it I also wrote this style guide to show 1. how I write bash and 2. how
-bash can be safe and predictable if written carefully.
-
-This guide will try to be as objective as possible, providing reasoning for why
-certain decisions were made.  For choices that are purely aesthetic (and may
-not be universally agreeable) they will exist in the `Aesthetics` section
-below.
-
 Aesthetics
 ----------
 
 ### Tabs / Spaces
 
-tabs.
+Spaces because I often change the editor and the system. :-(
 
 ### Columns
 
-not to exceed 80.
+not to exceed 80. But also never use long lines with \ !
 
 ### Semicolons
 
