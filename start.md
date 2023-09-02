@@ -90,7 +90,7 @@ function main() {
   #lock_init system
   # here add your own commands and functions!
   verbose_print "Show the verbose function!"
-  [ ${demoflag} ] && demo_function
+  [[ ${demoflag} ]] && demo_function
   printf "%s\n" "Main Function!"
 }
 
