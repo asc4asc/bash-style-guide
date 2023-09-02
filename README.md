@@ -16,6 +16,8 @@ Better Fork the original style guide on GitHub https://github.com/bahamas10/bash
 
 [Debug](debug.md)
 
+[Start_Template](start.md)
+
 Aesthetics
 ----------
 
