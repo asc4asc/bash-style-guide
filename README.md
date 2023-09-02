@@ -364,6 +364,8 @@ Avoid uppercase variable names unless there's a good reason to use them.
 Don't use `let` or `readonly` to create variables.  `declare` should *only*
 be used for associative arrays.  `local` should *always* be used in functions.
 
+May use upercase and readonly for constant variables. 
+
 ``` bash
 # right
 i=5
@@ -371,10 +373,12 @@ i=5
 bar='something'
 foobar=baz
 
+# may use
+readonly CONSTANTE1="test me"
+
 # wrong
 declare -i foo=5
 let foo++
-readonly bar='something'
 FOOBAR=baz
 ```
 
