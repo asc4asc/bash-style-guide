@@ -1,5 +1,7 @@
 ``` bash
 #!/usr/bin/env bash
+set -u
+set -o pipefail
 readonly SCRIPT_NAME="${0##*/}"
 
 # DESC: Pretty print the provided string
