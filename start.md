@@ -1,6 +1,7 @@
 ``` bash
 #!/usr/bin/env bash
 set -u
+set -f
 set -o pipefail
 readonly SCRIPT_NAME="${0##*/}"
 
