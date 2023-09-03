@@ -6,3 +6,10 @@
   * set -o nounset      # Disallow expansion of unset variables
   * set -o pipefail     # Use last non-zero exit code in a pipeline
   * ????
+
+# Think about
+* good code
+* bad code
+* how code grows
+* refacturing -> need of other programming language or tools.
+* .....
