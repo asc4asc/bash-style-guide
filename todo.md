@@ -7,6 +7,7 @@
   * set -o pipefail     # Use last non-zero exit code in a pipeline
   * set -f
   * ????
+* new print with colors. and easy print insted of printf ..... 
 
 # Think about
 * good code
