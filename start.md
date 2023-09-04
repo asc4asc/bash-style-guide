@@ -5,34 +5,12 @@ set -f
 set -o pipefail
 readonly SCRIPT_NAME="${0##*/}"
 
-# DESC: Pretty print the provided string
-# ARGS: $1 (required): Message to print (defaults to a green foreground)
-#       $2 (optional): Colour to print the message with. This can be an ANSI
-#                      escape code or one of the prepopulated colour variables.
-#       $3 (optional): Set to any value to not append a new line to the message
-# OUTS: None
-function pretty_print() {
-  if [[ $# -lt 1 ]]; then
-    print 'Missing required argument to pretty_print()!'
-    exit 127 
-  fi
-
-  printf '%b' "$2"
-    
-  # Print message & reset text attributes
-  if [[ -n ${3-} ]]; then
-    printf '%s%b' "$1" "$ta_none"
-  else
-    printf '%s%b\n' "$1" "$ta_none"
-  fi
-}
-
-# DESC: Only pretty_print() the provided string if verbose mode is enabled
+# DESC: verbose_print() the provided string if verbose mode is enabled
 # ARGS: $@ (required): Passed through to pretty_print() function
 # OUTS: None
 function verbose_print() {
   if [[ -n ${verbose-} ]]; then
-    pretty_print "$@"
+    printf "%s\n" "$@"
   fi
 }
 
