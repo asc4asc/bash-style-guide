@@ -8,6 +8,9 @@
   * set -f
   * ????
 * new print with colors. and easy print insted of printf ..... 
+* missing bool type but bool return from function, like true and false, exist.
+* no real type set is possible?
+* unset variable and set variable may be uesed as bool variable? 
 
 # Think about
 * good code
