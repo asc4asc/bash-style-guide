@@ -17,5 +17,6 @@ function check()
 check
 echo $?
 
+check
 if [[ check ]]; then echo "was true"; else echo "was false"; fi
 ```
