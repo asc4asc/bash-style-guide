@@ -16,6 +16,7 @@
 * good code
 * bad code
 * how code grows
+* bash code more to solve problems not to programm real ...?
 * refacturing -> need of other programming language or tools.
 * use of shellcheck
 * .....
