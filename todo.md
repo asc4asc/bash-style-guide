@@ -17,4 +17,5 @@
 * bad code
 * how code grows
 * refacturing -> need of other programming language or tools.
+* use of shellcheck
 * .....
